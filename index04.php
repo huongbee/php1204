@@ -9,7 +9,9 @@
 <style>
     .banco{
         width: 800px;
-        margin: 50px auto
+        margin: 50px auto;
+        border: 1px solid #000;
+        height: 800px
     }
     .oco{
         width: 100px;
@@ -25,9 +27,17 @@
 </style>
 <body>
     <div class="banco">
-        <div class="oco trang"></div>
-        <div class="oco den"></div>
+        <?php
+        for($y=1; $y<=8; $y++){
+            for($x = 1; $x<=8;$x++){
+                if(($y+$x)%2 == 0 ){
+                    echo ' <div class="oco trang"></div>';
+                }
+                else echo ' <div class="oco den"></div>';
+            }
+        }
         
+        ?>
     </div>
 </body>
 </html>
