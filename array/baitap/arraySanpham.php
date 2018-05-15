@@ -51,7 +51,12 @@ $arrSanpham = [
         'price'=> 29900000,
         'image'=>'https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600-400x400.jpg'
     ],
-]
+];
+
+foreach($arrSanpham as $sp){
+    echo $sp['price'] .'<br>';
+}
+//print_r($arrSanpham);
 
 
 
