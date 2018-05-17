@@ -7,158 +7,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bt3.css">
 </head>
+<?php
+require 'arraySanpham.php';
+?>
 <body>
     <div class="content">
+        <?php foreach($arrSanpham as $sp):?>
         <div class="item">
             <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
+                <img src="<?=$sp['image']?>" alt="">
             </div>
             <div class="infor">
-                <h2>OPPO F5</h2>
+                <h2><?=$sp['name']?></h2>
                 <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
                 <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
                 <li class="promotion">Khuyến mãi: </li>
                 <li>Giá tốt </li>              
                 <li>Tặng bình giữ nhiệt</li>  
             </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
+            <div class="name"><?=$sp['name']?></div>
+            <div class="price"><?=number_format($sp['price'])?> đ</div>
+            <!-- <div class="price"><?=number_format($sp['price'],2,',','.')?> đ</div> -->
         </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
-        <div class="item">
-            <div class="image">
-                <img src="images/oppo-f5-youth-vang-hong-6002-400x460.png" alt="">
-            </div>
-            <div class="infor">
-                <h2>OPPO F5</h2>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li>Phiếu mua hàng Oppo trị giá 200.000đ</li>
-                <li class="promotion">Khuyến mãi: </li>
-                <li>Giá tốt </li>              
-                <li>Tặng bình giữ nhiệt</li>  
-            </div>
-            <div class="name">OPPO F5</div>
-            <div class="price">6.190.000 đ</div>
-        </div>
+        <?php endforeach?>
     </div>
 </body>
 </html>

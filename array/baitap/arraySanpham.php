@@ -51,11 +51,31 @@ $arrSanpham = [
         'price'=> 29900000,
         'image'=>'https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600-400x400.jpg'
     ],
+    [
+        'name'=>"Samsung Galaxy S8 Plus",
+        'price'=> 17900000,
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/91131/samsung-galaxy-s8-plus-tim-2-400x460.png'
+    ],
+    [
+        'name'=>"Sony Xperia XZ Premium Pink Gold",
+        'price'=> 14900000,
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/113126/sony-xperia-xz-premium-pink-gold-400x460.png'
+    ],
+    [
+        'name'=>"Samsung Galaxy S8 Plus",
+        'price'=> 17900000,
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/91131/samsung-galaxy-s8-plus-tim-2-400x460.png'
+    ],
+    [
+        'name'=>"Sony Xperia XZ Premium Pink Gold",
+        'price'=> 14900000,
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/113126/sony-xperia-xz-premium-pink-gold-400x460.png'
+    ],
 ];
 
-foreach($arrSanpham as $sp){
-    echo $sp['price'] .'<br>';
-}
+// foreach($arrSanpham as $sp){
+//     echo $sp['price'] .'<br>';
+// }
 //print_r($arrSanpham);
 
 

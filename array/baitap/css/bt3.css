@@ -53,6 +53,12 @@ body{
     color: blue;
     cursor: pointer;
 }
+.infor h2{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 95%;
+    text-overflow: ellipsis;
+}
 
 @media screen and (max-width:500px){
     .content{
