@@ -12,14 +12,4 @@ move_uploaded_file($image1['tmp_name'],'images/'.$name);
 echo 12345;
 
 
-/*
-kiem tra file size <= 2MB 2*1024*1024
-kiem tra loai file  (png, jpg, gif, jpeg) ko phan biet hoa - thuong
-rename file
-*/
-
-/**
- * upload multi
- */
-
 ?>

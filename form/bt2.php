@@ -7,11 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Hello world!</h3>
-    <?php 
-        echo "Hello class";
-        echo "Hello class";
-        unlink('dashboard.xlsx');
-    ?>
+    <form action="upload-file-02.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Upload</button>
+    </form>
 </body>
 </html>
