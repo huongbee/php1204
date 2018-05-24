@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="upload-file-02.php" method="POST" enctype="multipart/form-data">
-        <input type="file" name="image" required>
+    <form action="upload-file-03.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image[]" required multiple>
         <button type="submit">Upload</button>
+        
     </form>
 </body>
 </html>
