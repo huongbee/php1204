@@ -18,5 +18,7 @@ if(!isset($_SESSION['email']) || !isset($_SESSION['pw']) || $_SESSION['email'] !
 </head>
 <body>
     <h3>This is home page</h3>
+    <div>Hello <?=$_SESSION['email']?></div>
+    <div><a href="logout.php">Logout</a></div>
 </body>
 </html>
