@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +15,12 @@
         <div class="row justify-content-center">
             <div class="col-4">
                 <h2 class="text-center">Login</h2>
+                <?php if(isset($_SESSION['error'])): ?>
+                    <div class="alert alert-danger"><?=$_SESSION['error']?></div>
+                <?php 
+                    unset($_SESSION['error']); 
+                    endif
+                ?>
                 <form action="xuly.php" method="post">
                     <div class="form-group">
                         <label for="username">Email:</label>
