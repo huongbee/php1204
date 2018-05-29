@@ -4,7 +4,11 @@ if(!isset($_SESSION['email']) || !isset($_SESSION['pw']) || $_SESSION['email'] !
     if(isset($_COOKIE['email']) && $_COOKIE['email']=='admin@gmail.com' && isset($_COOKIE['pw']) && $_COOKIE['pw']=='111111'){
         $_SESSION['email'] = $_COOKIE['email'];
         $_SESSION['pw'] = $_COOKIE['pw'];
-        echo "using cookie";
+        //echo "using cookie";
+
+        //set thêm time
+        setcookie('email',$email, time()+120);
+        setcookie('pw',$password, time()+120); // md5()
     }
     else{
         $_SESSION['error'] = "Vui lòng đăng nhập";    
