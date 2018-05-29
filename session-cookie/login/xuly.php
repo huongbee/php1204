@@ -7,6 +7,11 @@ if($email == 'admin@gmail.com' && $password==111111){
     $_SESSION['email'] = $email;
     $_SESSION['pw'] = $password;
 
+    if(isset($_POST['remember']) && $_POST['remember']==1 || $_POST['remember']=="on"){
+        setcookie('email',$email, time()+120);
+        setcookie('pw',$password, time()+120); // md5()
+    }
+
     header("Location:home.php");
     
 }

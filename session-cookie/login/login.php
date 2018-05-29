@@ -31,7 +31,7 @@ session_start();
                         <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
-                        <input type="checkbox"  id="remember">
+                        <input type="checkbox" name="remember" value="1" id="remember">
                         <label for="remember">Remember me?</label>
                     </div>
                     <div class="form-group text-right">
