@@ -18,6 +18,8 @@ if(!isset($_SESSION['email']) || !isset($_SESSION['pw']) || $_SESSION['email'] !
 }
 else{
     echo "using session";
+    // unset($_COOKIE['PHPSESSID']);
+    // print_r($_COOKIE);
 }
 ?>
 
