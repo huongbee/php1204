@@ -5,6 +5,12 @@ class Sinhvien{
     var $name = 'not set'; // thuoc tinh - property
     var $age = 0;
 
+    function __construct($name1){
+        echo $name1;
+        // echo __CLASS__.' được khởi tạo. ';
+        // echo __FUNCTION__ ." được gọi";
+    }
+
     function setName($ten){ //hanh dong // verb
         $this->name = $ten;
     }
@@ -26,9 +32,11 @@ class Sinhvien{
 }
 
 
-$sv1 = new Sinhvien;
+$sv1 = new Sinhvien('huonghuong huong');
 
-echo $sv1->getInfor('Ti', 12);
+//$sv1->__construct('huong');// sai 
+
+//echo $sv1->getInfor('Ti', 12);
 
 //$sv2 = new Sinhvien;
 
