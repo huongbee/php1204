@@ -5,11 +5,14 @@ class Sinhvien{
     var $name = 'not set'; // thuoc tinh - property
     var $age = 0;
 
-    function __construct($name1){
-        echo $name1;
+    function __construct($name, $age){
+        $this->setName($name);
+        $this->setAge($age);
+        echo "Sinh vien ".$this->name." co tuoi la: ".$this->age;
         // echo __CLASS__.' được khởi tạo. ';
         // echo __FUNCTION__ ." được gọi";
     }
+
 
     function setName($ten){ //hanh dong // verb
         $this->name = $ten;
@@ -29,11 +32,20 @@ class Sinhvien{
         $this->setAge($age);
         return "Sinh vien ".$this->name." co tuoi la: ".$this->age;
     }
+    function __destruct(){
+        unset($this->name);
+        $this->age = null;
+
+        //echo $this->name;
+        // echo "<br>";
+        // echo __FUNCTION__ ." được gọi";
+    }
 }
 
 
-$sv1 = new Sinhvien('huonghuong huong');
-
+$sv1 = new Sinhvien('huong', 10);
+echo "<br>";
+echo $sv1->name;
 //$sv1->__construct('huong');// sai 
 
 //echo $sv1->getInfor('Ti', 12);
