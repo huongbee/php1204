@@ -22,8 +22,6 @@ echo $sv1->getName(); //Teo
 $sv2 = new Sinhvien;
 echo $sv2->getName(); // Teo
 
-
-
 // $sv = new Sinhvien;
 // echo $sv->getname();
 
