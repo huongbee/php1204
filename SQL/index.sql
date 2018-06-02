@@ -1,4 +1,4 @@
-CREATE TABLE `apple4`.`users` (
+CREATE TABLE `users` (
     `id` INT NOT NULL AUTO_INCREMENT , 
     `name` VARCHAR(50) NOT NULL , 
     `email` VARCHAR(100) NOT NULL , 
@@ -12,3 +12,8 @@ CREATE TABLE `apple4`.`users` (
 
 
 ALTER TABLE `users` ADD `address` VARCHAR(100) NULL DEFAULT NULL AFTER `phone`;
+
+
+ALTER TABLE users 
+ADD  FOREIGN KEY (id_role)
+REFERENCES role(id)
