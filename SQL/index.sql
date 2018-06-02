@@ -17,3 +17,11 @@ ALTER TABLE `users` ADD `address` VARCHAR(100) NULL DEFAULT NULL AFTER `phone`;
 ALTER TABLE users 
 ADD  FOREIGN KEY (id_role)
 REFERENCES role(id)
+
+
+INSERT INTO users(name, email, id_role, password, birthdate, phone)
+VALUES( 'Teo', 'teo@gmail.com', 2, md5(111), '1998-5-30', '23456743534')
+
+
+INSERT INTO users
+VALUES( 4, 'Ti', 'ti@gmail.com', 2, md5(111), '1998-5-30', '23456743534', "Quan 1", 1);
