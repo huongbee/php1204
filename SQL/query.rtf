@@ -8,19 +8,64 @@
 Y\'eau c\uc0\u7847 u: Th\u7921 c hi\u7879 n c\'e1c c\'e2u truy v\u7845 n sau tr\'ean CSDL db_banhang\
 \
 1.  Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m\
-1.1. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3 t\'ean T\'ean sp,\u272 \u417 n gi\'e1, H\'ecnh.\
+\
+SELECT * FROM products\
+\
+1.1. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3 t\'ean T\'ean sp,\u272 \u417 n gi\'e1, H\'ecnh, s\u7855 p x\u7871 p \u273 \u417 n gi\'e1 t\u259 ng d\u7847 n\
+(ASC/DESC)\
+\
+SELECT name, price, image FROM products\
+ORDER BY price ASC\
+\
+\
 \
 3. Li\uc0\u7879 t k\'ea danh s\'e1ch kh\'e1ch h\'e0ng g\u7891 m c\'f3 c\'e1c th\'f4ng tin sau: t\'ean kh\'e1ch h\'e0ng, gi\u7899 i t\'ednh, \u273 \u7883 a ch\u7881 , \u273 i\u7879 n tho\u7841 i, \
 	danh s\'e1ch s\uc0\u7869  \u273 \u432 \u7907 c s\u7855 p t\u259 ng d\u7847 n theo t\'ean kh\'e1ch h\'e0ng.\
 \
-4. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: T\'ean sp, M\'f4 t\u7843 , \u272 \u417 n gi\'e1, v\'e0 s\u7855 p x\u7871 p gi\u7843 m theo c\u7897 t \u273 \u417 n gi\'e1:  orderBy\
+4. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: T\'ean sp, M\'f4 t\u7843 , \u272 \u417 n gi\'e1, v\'e0 s\u7855 p x\u7871 p gi\u7843 m theo c\u7897 t \u273 \u417 n gi\'e1:\
+\
 \
 5. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: T\'ean sp, M\'f4 t\u7843 , \u272 \u417 n gi\'e1. Ch\u7881  li\u7879 t k\'ea c\'e1c S\u7843 n ph\u7849 m \'93iphone\'94.\
 \
-6. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m m\'e0 trong t\'ean sp c\'f3 t\u7915  \'91macbook\'92 v\'e0 gi\'e1 l\u7899 n h\u417 n 25 000 000\
+SELECT name, price, image \
+FROM products\
+WHERE name LIKE \'91%iPhone%\'92\
+\
+\
+6. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m m\'e0 trong t\'ean sp c\'f3 t\u7915  \'91macbook\'92 v\'e0 gi\'e1 l\u7899 n h\u417 n 25.000.000\
+\
+SELECT *\
+FROM products\
+WHERE name LIKE \'91%macbook%\'92\
+AND price > 25000000\
+\
+\
 7. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c S\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 t\u7915  500.000 VN\u272  \u273 \u7871 n 1.000.000 VN\u272 \
 \
+SELECT *\
+FROM products\
+WHERE price>=500000\
+AND price <= 1000000\
+\
+SELECT *\
+FROM products\
+WHERE price BETWEEN 500000 AND 1000000\
+\
+\
 9. Li\uc0\u7879 t k\'ea c\'e1c s\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 l\u7899 n h\u417 n 35.000.000 VN\u272 \
+\
+SELECT *\
+FROM products\
+WHERE price> 3500000\
+\
+IN()\
+NOTIN()\
+LIKE()\
+NOTLIKE()\
+WHERE name= (SELECT\'85.)\
+\
+\
+\
 \
 10. Li\uc0\u7879 t k\'ea th\'f4ng tin c\'e1c s\u7843 n ph\u7849 m c\'f3 t\'ean 'iPhone X 256GB, 'iPhone 8 Plus 256GB', 'iPhone 7 Plus 32GB'.\
 \
@@ -34,11 +79,24 @@ Y\'eau c\uc0\u7847 u: Th\u7921 c hi\u7879 n c\'e1c c\'e2u truy v\u7845 n sau tr\
 \
 15. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: t\'ean s\u7843 n ph\u7849 m, M\'f4 t\u7843 . C\'f3 s\u7855 p gi\u7843 m theo c\u7897 t \u273 \u417 n gi\'e1 v\'e0 s\u7855 p t\u259 ng theo c\u7897 t t\'ean sp\
 \
-16. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 t\'ean b\u7855 t \u273 \u7847 u l\'e0 'N'.\
+16. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 t\'ean b\u7855 t \u273 \u7847 u l\'e0 \'91Iphone\'92.\
 \
-17. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 k\'fd t\u7921  cu\u7889 i c\'f9ng c\u7911 a sp l\'e0 'n'.\
+SELECT *\
+FROM products\
+WHERE name LIKE \'91iPhone%\'92\
+\
+\
+17. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 k\'fd t\u7921  cu\u7889 i c\'f9ng c\u7911 a sp l\'e0 \'9232GB\'92.\
+SELECT *\
+FROM products\
+WHERE name LIKE \'92%32GB\'92\
+\
 \
 18. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m m\'e0 trong t\'ean s\u7843 n ph\u7849 m c\'f3 t\u7915  'iMac'.\
+\
+SELECT *\
+FROM products\
+WHERE name LIKE \'92%iMac%\'92\
 \
 20. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 t\u7915  50.000.000 VN\u272  \u273 \u7871 n 100.000.000 VN\u272 \
 \
