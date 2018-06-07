@@ -21,3 +21,4 @@ DELETE FROM users WHERE id=3;
 INSERT INTO users(name,email,id_role,password)
 SELECT name,email,id_role,password 
 FROM users_backup WHERE id=3
+
